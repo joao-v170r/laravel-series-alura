@@ -1,8 +1,9 @@
-<x-layout title="Series"> 
+<x-layout title="Séries">
     <a href="/series/criar">Adicionar</a>
-    <ul> 
-        @foreach($mySeries as $serie)
+
+    <ul>
+        @foreach ($series as $serie)
         <li>{{ $serie }}</li>
         @endforeach
-</ul>
+    </ul>
 </x-layout>

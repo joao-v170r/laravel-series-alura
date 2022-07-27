@@ -1,6 +1,6 @@
-<x-layout title="Nova Serie">
+<x-layout title="Nova Série">
     <form action="" method="post">
-        <label for="nome">Nome: </label>
-        <input type="text" id="nomeSerie" name="nome">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
     </form>
 </x-layout>
