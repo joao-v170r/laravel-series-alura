@@ -14,10 +14,10 @@
     <div class="div-background-image">
         <img class="img-background" src="{{ asset('img/Cup.png') }}" alt="imagen de fundo">
     </div>
-    <nav class="navbar p-3">
+    <nav class="navbar p-3 nav-background-color">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-            <h3 class="display-5">
+            <h3 class="display-5 title-netflix">
                 Netflix Clone
                 <small class="text-white">{{ $title }}</small>
             </h3>

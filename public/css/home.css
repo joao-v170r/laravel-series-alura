@@ -16,3 +16,13 @@
     border: 0;
     margin: 0;
 }
+
+.nav-background-color{
+    background: linear-gradient(178deg, #000000ba,#f7f7f700, #ffffff00);
+}
+
+.title-netflix{
+    color: #e50914;
+    font-weight: 500;
+    font-family: auto;
+}

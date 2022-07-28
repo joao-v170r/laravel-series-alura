@@ -1,4 +1,4 @@
-<x-layout title="Nova Série">
+<x-layout title="adicione séries">
     <form action="" method="post">
         <div class="input-group mb-3">
             <span class="input-group-text bg-dark text-white bg-opacity-50" id="">Nome da Série</span>

@@ -1,4 +1,4 @@
-<x-layout title="Séries"><?= $key ?> {{ $key }}
+<x-layout title="list séries">
     <div class="">
         <ul class="list-group">
             @foreach ($series as $key => $serie)
