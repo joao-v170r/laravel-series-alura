@@ -3,10 +3,10 @@
     background-size: cover;
     display: block;
     height: 100%;
-    overflow: hidden;
+    overflow: hidden;   /*destivando scrow do mouse*/
     position: absolute;
     width: 100%;
-    z-index: -1;
+    z-index: -1;    
 }
 
 .img-background{
@@ -23,6 +23,6 @@
 
 .title-netflix{
     color: #e50914;
-    font-weight: 500;
-    font-family: auto;
+    font-weight: 550;
+    font-family: 'initial','fantasy';
 }
