@@ -23,8 +23,10 @@ Route::controller(SeriesController::class)->group(function () {
     Route::get('/series/criar','create')->name('series.create');
     Route::post('/series/salvar','store')->name('series.store');
     Route::delete('/series/deletar/{id}','destroy')->name('series.destroy')->whereNumber('id');
+    Route::get('/series/{id}/editar','edit')->name('series.edit')->whereNumber('id');
+    Route::put('/series/atualizar/{id}', 'update')->name('series.update')->whereNumber('id');
 });
 
-Route::get('/test', function () {
+Route::get('/loadingPage', function () {
     return view('welcome');
 });
