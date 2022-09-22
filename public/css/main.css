@@ -1,0 +1,45 @@
+.div-background-image{
+    background: black;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;    
+}
+
+.page-content{    
+    overflow: hidden;   /*destivando scrow do mouse*/
+}
+
+.title-navbar-icon{
+    align-items: center;
+    font-weight: 700;
+    font-family: 'Bebas Neue', 'auto';
+    gap: 0.5rem;
+}
+
+
+.color-base{
+    color: #ffa500;
+}
+
+.bg-base{
+    background-color:  #ffa500;
+}
+
+.img-background{
+    opacity: .5;
+    min-width: 100%;
+    min-height: 100%;
+    border: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/Cup.png);
+    background-position: center;
+}
+
+.nav-background-color{
+    background: linear-gradient(178deg, #0000007a,#f7f7f700, #ffffff00);
+}
