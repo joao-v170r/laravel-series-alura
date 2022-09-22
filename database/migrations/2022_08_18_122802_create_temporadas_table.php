@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Serie;
 
 return new class extends Migration
 {
@@ -14,7 +15,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('temporadas', function (Blueprint $table) {
-            $table->id();
+            $table->id();            
+            $table->unsignedTinyInteger('numero');
+            $table->foreignIdFor(Serie::class)->constrained();
             $table->timestamps();
         });
     }

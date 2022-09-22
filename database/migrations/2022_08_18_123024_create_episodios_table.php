@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Temporada;
 
 return new class extends Migration
 {
@@ -15,6 +16,9 @@ return new class extends Migration
     {
         Schema::create('episodios', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->nullable();
+            $table->unsignedTinyInteger('numero');
+            $table->foreignIdFor(Temporada::class)->constrained();
             $table->timestamps();
         });
     }
