@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->unsignedTinyInteger('numero');
-            $table->foreignIdFor(Temporada::class)->constrained();
+            $table->unsignedBigInteger('temporada_id');
             $table->timestamps();
         });
     }

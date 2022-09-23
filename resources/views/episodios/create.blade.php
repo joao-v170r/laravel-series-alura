@@ -1,13 +1,13 @@
 <x-layout titleWindows="adicione séries">
         <x-form.validade :errors="$errors"/>
-        <section class="container ">
+        <section class="container">
             <form class="row" action="{{ route('series.store') }}" method="POST">
                 @csrf
                 @method('POST')    
                 <div class="col-12">
                     <div class="input-group m-1">
                         <span class="input-group-text bg-dark text-white bg-opacity-50" id="">Nome da Série</span>
-                        <input type="text" id="nomeSerie" class="form-control" name="nome" value="{{ old('nome') }}">
+                        <input type="text" id="nomeSerie" class="form-control" name="name" value="{{ old('name') }}">
                     </div>    
                 </div>   
                 <div class="col-6">

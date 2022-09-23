@@ -24,15 +24,18 @@ class SeriesFormRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'name' => ['required', 'min:3']
-        ];
+        return [    
+            'nome' => ['required', 'min:3'],
+            'numbTemporadas' => ['required'],
+            'numbEpisodios' => ['required']];
     }
 
     public function messages(){
         return [
-            'name.required' => 'O nome é obrigatório',
-            'name.min' => 'O nome deve ter no mínimo :min caracteres'
+            'nome.required' => 'O nome é obrigatório', 
+            'nome.min' => 'O nome deve ter no mínimo :min caracteres',
+            'numbTemporadas.required' => 'O N° de temporadas é obrigatório', 
+            'numbEpisodios.required' => 'O N° de episódios é obrigatório'
         ];
     }
 }

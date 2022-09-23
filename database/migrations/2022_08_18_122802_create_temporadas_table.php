@@ -17,7 +17,7 @@ return new class extends Migration
         Schema::create('temporadas', function (Blueprint $table) {
             $table->id();            
             $table->unsignedTinyInteger('numero');
-            $table->foreignIdFor(Serie::class)->constrained();
+            $table->unsignedBigInteger('serie_id');
             $table->timestamps();
         });
     }

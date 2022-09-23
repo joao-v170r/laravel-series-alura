@@ -27,6 +27,7 @@ Route::controller(SeriesController::class)->group(function () {
     Route::put('/series/atualizar/{id}', 'update')->name('series.update')->whereNumber('id');
 });
 
+
 Route::get('/loadingPage', function () {
     return view('welcome');
 });

@@ -9,8 +9,10 @@ use App\Http\Requests\SeriesFormRequest;
 class SeriesController extends Controller
 {
     public function index(Request $request)
-    {     
-        $series = Serie::query()->orderBy('name')->get();
+    {
+        $series = Serie::query()->orderBy('nome')->get();
+
+        #$temporadas = $series->temporadas;
 
         $mensagem = session('mensagem.sucesso');
 
@@ -23,10 +25,21 @@ class SeriesController extends Controller
     }
 
     public function store(SeriesFormRequest $request)
-    { 
-        $serie = Serie::create($request->only('name'));
+    {
+        $serie = Serie::create($request->only('nome'));
 
-        return to_route('series.index')->with('mensagem.sucesso', "Série {$serie->name} adicionada com sucesso!");
+        for($numeroTemp = 1; $numeroTemp <= $request->numbTemporadas; $numeroTemp++){
+            /**
+             * @var \App\Models\Temporada $temporada
+             */
+            $temporada = $serie->temporadas()->create(['numero' => $numeroTemp]);
+
+            for($numeroEp = 1; $numeroEp <= $request->numbEpisodios; $numeroEp++){
+                $temporada->episodios()->create(['numero' => $numeroEp]);
+            }
+        }
+
+        return to_route('series.index')->with('mensagem.sucesso', "Série {$serie->nome} adicionada com sucesso!");
     }
 
     public function destroy(int $idSerie)
@@ -53,11 +66,11 @@ class SeriesController extends Controller
     {   
         $serie = Serie::find($idSerie);
 
-        $nameAntigo = $serie->name;
+        $nomeAntigo = $serie->nome;
 
-        $serie->name = $request->name;
+        $serie->nome = $request->nome;
         $serie->save();
-        
-        return to_route('series.index')->with('mensagem.sucesso', "Série ($nameAntigo) passou a ser: {$serie->name} !");
+
+        return to_route('series.index')->with('mensagem.sucesso', "Série ($nomeAntigo) passou a ser: {$serie->nome} !");
     }
 }

@@ -11,7 +11,7 @@
                 @foreach ($series as $serie)
                 <li class="list-group-item d-flex justify-content-between align-items-start  bg-dark bg-opacity-50">                
                     <div class="">
-                        <label class="form-check-label text-white stretched-link" id="label-{{ $serie['id'] }}" for="series{{ $serie['id'] }}">{{ $serie['name'] }}</label>                    
+                        <label class="form-check-label text-white stretched-link" id="label-{{ $serie['id'] }}" for="series{{ $serie['id'] }}">{{ $serie['nome'] }}</label>                    
                     </div>
                     <div class="row g-3 align-items-center">
                         <div class=" input-group col-auto">
