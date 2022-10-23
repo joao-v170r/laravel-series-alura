@@ -9,10 +9,12 @@
         <div class="">        
             <ul class="list-group">          
                 @foreach ($series as $serie)
-                <li class="list-group-item d-flex justify-content-between align-items-start  bg-dark bg-opacity-50">                
-                    <div class="">
-                        <label class="form-check-label text-white stretched-link" id="label-{{ $serie['id'] }}" for="series{{ $serie['id'] }}">{{ $serie['nome'] }}</label>                    
-                    </div>
+                <li class="list-group-item d-flex justify-content-between align-items-start  bg-dark bg-opacity-50">
+                    <a href="{{ route('temporadas.index', $serie['id']) }}">
+                        <div class="">
+                            <label class="form-check-label text-white stretched-link" id="label-{{ $serie['id'] }}" for="series{{ $serie['id'] }}">{{ $serie['nome'] }}</label>              
+                        </div>
+                    </a> 
                     <div class="row g-3 align-items-center">
                         <div class=" input-group col-auto">
                             <div class="m-1">

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\SeriesController;
+use App\Http\Controllers\TemporadasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,6 +28,9 @@ Route::controller(SeriesController::class)->group(function () {
     Route::put('/series/atualizar/{id}', 'update')->name('series.update')->whereNumber('id');
 });
 
+Route::controller(TemporadasController::class)->group(function () {
+    Route::get('/temporadas/{id}', 'index')->name('temporadas.index');
+});
 
 Route::get('/loadingPage', function () {
     return view('welcome');
