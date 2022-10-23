@@ -24,6 +24,10 @@
     color: #ffa500;
 }
 
+.font-fantasy{
+    font-family: fantasy!important;
+}
+
 .bg-base{
     background-color:  #ffa500;
 }
@@ -36,7 +40,7 @@
     margin: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../img/Cup.png);
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/79fe83d4-7ef6-4181-9439-46db72599559/f0c190ec-fb9d-4442-89f0-08c267b5aee0/BR-pt-20221017-popsignuptwoweeks-perspective_alpha_website_medium.jpg);
     background-position: center;
 }
 

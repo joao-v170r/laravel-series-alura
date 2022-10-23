@@ -1,3 +1,3 @@
-<x-layout titlePag="Bem Vindo">
+<x-layout titleWindows="Bem Vindo">
 
 </x-layout>
